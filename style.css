@@ -163,7 +163,15 @@ a {
     padding: 0.3em 0.7em;
     transition: background 0.2s;
 }
-
+.contact-info.aos-init.aos-animate h1,
+.contact-info.aos-init.aos-animate h2,
+.contact-info.aos-init.aos-animate h3,
+.contact-info.aos-init.aos-animate h4,
+.contact-info.aos-init.aos-animate h5,
+.contact-info.aos-init.aos-animate h6,
+.contact-info.aos-init.aos-animate .font-heading {
+    font-size: 26px !important;
+}
 @media (max-width: 900px) {
     .nav-links {
         display: none;
