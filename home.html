@@ -83,7 +83,7 @@
 }
 .product-card:hover .product-img {
   transform: scale(1.06);
-  filter: brightness(0.68);
+
 }
 
 /* Gradient overlay — add this div inside each card */
@@ -221,20 +221,41 @@ a.btn-luxury.aos-init.aos-animate span{
 <!-- HERO SECTION START -->
 <header class="hero-section">
   <div class="hero-image-wrapper">
-                <picture>
-                    <source srcset="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Gemini_Generated_Image_ysiuc9ysiuc9ysiu_600875ae-eab3-4cd6-b133-65e5cea1eba8.jpg?v=1778524921" media="(max-width: 600px)">
-                    <img
-                        src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Gemini_Generated_Image_ysiuc9ysiuc9ysiu_600875ae-eab3-4cd6-b133-65e5cea1eba8.jpg?v=1778524921"
-                        alt="Elegant fashion models in premium attire"
-                        class="hero-image"
-                        loading="lazy"
-                        decoding="async"
-                    />
-                </picture>
-    <div class="hero-gradient"></div>
- 
+    <picture>
+
+      <!-- Mobile Image -->
+      <source 
+        media="(max-width: 600px)"
+        srcset="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/WhatsApp_Image_2026-05-19_at_10.40.44_PM_1.jpg?v=1779210792"
+      >
+
+      <!-- Desktop Image -->
+      <img
+        src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/WhatsApp_Image_2026-05-19_at_10.40.44_PM.jpg?v=1779210793"
+        alt="Elegant fashion models in premium attire"
+        class="hero-image"
+        loading="lazy"
+        decoding="async"
+      />
+
+    </picture>
   </div>
 </header>
+
+<style>
+.hero-section,
+.hero-image-wrapper,
+.hero-image-wrapper picture,
+.hero-image {
+    width: 100%;
+    height: 90vh;
+}
+
+.hero-image {
+    object-fit: cover;
+    display: block;
+}
+</style>
 <!-- HERO SECTION END -->
 
     <!-- Ultra-Premium About Section -->
@@ -368,25 +389,26 @@ a.btn-luxury.aos-init.aos-animate span{
   </div>
         <div class="product-grid">
             <div class="product-card" data-aos="fade-up" data-aos-delay="0">
-                <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/4_1080x_4ae1b55b-d1de-42a0-be81-d74ad9367000.webp?v=1779202509" alt="Dress" class="product-img">
-                
-              
+                <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Gemini_Generated_Image_4xvabq4xvabq4xva.png?v=1779207388" alt="Dress" class="product-img">
+            </div>
+                <div class="product-card" data-aos="fade-up" data-aos-delay="0">
+                <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Gemini_Generated_Image_nmrtucnmrtucnmrt.png?v=1779206963" alt="Dress" class="product-img">
             </div>
             <div class="product-card" data-aos="fade-up" data-aos-delay="100">
-                <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/8_1080x_fb9c9992-7454-4591-b7f5-789aaa5a6d9a.webp?v=1779202657" alt="Suit" class="product-img">
+                <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Gemini_Generated_Image_8ohp0u8ohp0u8ohp.png?v=1779207613" alt="Suit" class="product-img">
              
            
             </div>
             <div class="product-card" data-aos="fade-up" data-aos-delay="200">
-                <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/0D5A7707Large.webp?v=1779202877" alt="Coat" class="product-img">
+                <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Gemini_Generated_Image_gvm6m1gvm6m1gvm6.png?v=1779207683" alt="Coat" class="product-img">
               
                
             </div>
-            <div class="product-card" data-aos="fade-up" data-aos-delay="300">
+            <!-- <div class="product-card" data-aos="fade-up" data-aos-delay="300">
                 <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/1_1080x_74ea8197-b2c9-46cd-bc2a-761d93f118c4.webp?v=1779203034" alt="Bag" class="product-img">
               
                
-            </div>
+            </div> -->
         </div>
     </section>
 
@@ -397,22 +419,22 @@ a.btn-luxury.aos-init.aos-animate span{
   </div>
         <div class="product-grid">
             <div class="product-card" data-aos="fade-up" data-aos-delay="0">
-                <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/1_fbddb731-832b-4745-8aa9-995933704811.webp?v=1778523744" alt="Dress" class="product-img">
+                <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Gemini_Generated_Image_ct4bcgct4bcgct4b.png?v=1779207906" alt="Dress" class="product-img">
                 
               
             </div>
             <div class="product-card" data-aos="fade-up" data-aos-delay="100">
-                <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/241019_Ramraj_e-com11408.webp?v=1778523745" alt="Suit" class="product-img">
+                <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Gemini_Generated_Image_l6b88fl6b88fl6b8.png?v=1779208125" alt="Suit" class="product-img">
              
            
             </div>
             <div class="product-card" data-aos="fade-up" data-aos-delay="200">
-                <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/2_853dcf53-fe3e-48f3-b00c-f470acc01960.webp?v=1778523745" alt="Coat" class="product-img">
+                <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Gemini_Generated_Image_x22vtex22vtex22v.png?v=1779208467" alt="Coat" class="product-img">
                
                
             </div>
             <div class="product-card" data-aos="fade-up" data-aos-delay="300">
-                <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/3_8a49cb02-9f77-4d38-b461-3966ad732d7d.webp?v=1778523745" alt="Bag" class="product-img">
+                <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Gemini_Generated_Image_nkzksinkzksinkzk.png?v=1779208619" alt="Bag" class="product-img">
           
                
             </div>
@@ -427,7 +449,7 @@ a.btn-luxury.aos-init.aos-animate span{
   </div>
         <div class="product-grid">
             <div class="product-card" data-aos="fade-up" data-aos-delay="0">
-                <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/187_944cd090-2f7a-42a2-85eb-a27bea58bcbc.webp?v=1778523967" alt="Dress" class="product-img">
+                <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Gemini_Generated_Image_7ydcle7ydcle7ydc_1.png?v=1779208933" alt="Dress" class="product-img">
                 
               
             </div>
@@ -465,10 +487,9 @@ a.btn-luxury.aos-init.aos-animate span{
         <div class="footer-grid">
             <div class="footer-col">
                 <h3 class="font-heading"><img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Gemini_Generated_Image_rciuvtrciuvtrciu11.png?v=1778480331" alt="Modern Shopping Mall"/></h3>
-                <p>32, 2Ibrahim saheb street,</p>
-                <p>Shivaji Nagar, Bengaluru, Karnataka 560001</p>
-                <p>+33 1 23 45 67 89</p>
-                <p>contact@lumiere.com</p>
+                    <p>Mahatma Gandhi Rd, Gowripete, Kolar, Karnataka 563101</p>
+               
+                <p>081522 23232</p>
             </div>
             <div class="footer-col">
                 <h3 class="font-heading">Legal</h3>
@@ -479,7 +500,7 @@ a.btn-luxury.aos-init.aos-animate span{
             <div class="footer-col">
                 <h3 class="font-heading">Follow Us</h3>
                 <div class="social-icons">
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/modern_shopping_mall_kolar/?hl=en"><i class="fa-brands fa-instagram"></i></a>
                     <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="#"><i class="fa-brands fa-twitter"></i></a>
                 </div>
