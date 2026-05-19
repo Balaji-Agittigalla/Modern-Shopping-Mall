@@ -11,9 +11,166 @@
     
     <!-- AOS Animations -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+    <!-- Add to <head> once -->
     <!-- Custom Styles -->
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* ─── Editorials CSS ─── */
+.products {
+  padding: 0px;
+  border-bottom: 0.5px solid #e8e4de;
+  background: #faf9f7;
+}
+.products:last-of-type { border-bottom: none; }
+
+/* Section header */
+.products .ed-eyebrow {
+
+  font-size: 10px; font-weight: 300;
+  letter-spacing: 5px; text-transform: uppercase;
+  color: #aaa; text-align: center;
+  display: flex; align-items: center;
+  justify-content: center; gap: 10px;
+  margin-bottom: 10px;
+}
+.products .ed-eyebrow::before,
+.products .ed-eyebrow::after {
+  content: ''; display: block;
+  width: 24px; height: 0.5px; background: #bbb;
+}
+.products .section-title {
+
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 300; color: #1a1a1a;
+  text-align: center; line-height: 1.1;
+  margin-bottom: 14px;
+}
+.products .section-title::after {
+  content: ''; display: block;
+  width: 32px; height: 1px;
+  background: #1a1a1a; margin: 14px auto 0;
+}
+
+/* Grid */
+.product-grid {
+  display: flex;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow-x: scroll;
+  scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+}
+
+.product-grid::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+/* Card */
+.product-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.product-card .product-img {
+  width: 100%; aspect-ratio: 3 / 4;
+  object-fit: cover; display: block;
+  filter: brightness(0.9);
+  transition: transform 0.65s cubic-bezier(.25,.46,.45,.94), filter 0.65s;
+}
+.product-card:hover .product-img {
+  transform: scale(1.06);
+  filter: brightness(0.68);
+}
+
+/* Gradient overlay — add this div inside each card */
+.product-card .card-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.75) 0%,
+    rgba(0,0,0,0.12) 40%,
+    transparent 65%
+  );
+}
+
+/* Card body */
+.product-card .card-body {
+  position: absolute; bottom: 0;
+  left: 0; right: 0;
+  padding: 0 16px 22px;
+  display: flex; flex-direction: column;
+  align-items: center; gap: 12px;
+}
+
+/* Category label */
+.product-card .card-cat {
+  font-size: 10px; font-weight: 300;
+  letter-spacing: 4px; text-transform: uppercase;
+  color: #fff;
+  display: flex; align-items: center; gap: 7px;
+}
+.product-card .card-cat::before,
+.product-card .card-cat::after {
+  content: ''; display: block;
+  width: 14px; height: 0.5px;
+  background: rgba(255,255,255,0.65);
+}
+
+/* Shop Now button */
+.product-card .card-btn {
+  font-size: 9px; font-weight: 300;
+  letter-spacing: 2.5px; text-transform: uppercase;
+  color: #fff;
+  border: 0.5px solid rgba(255,255,255,0.55);
+  padding: 8px 18px; background: transparent;
+  cursor: pointer;
+  transition: background 0.3s, border-color 0.3s;
+}
+.product-card:hover .card-btn {
+  background: rgba(255,255,255,0.14);
+  border-color: #fff;
+}
+
+/* Badge (top-left, shows on hover) */
+.product-card .card-badge {
+  position: absolute; top: 12px; left: 12px;
+  font-size: 8px; font-weight: 400;
+  letter-spacing: 2px; text-transform: uppercase;
+  background: rgba(255,255,255,0.13);
+  color: #fff; padding: 4px 9px;
+  border: 0.5px solid rgba(255,255,255,0.3);
+  opacity: 0; transition: opacity 0.3s;
+}
+.product-card:hover .card-badge { opacity: 1; }
+
+/* Card number (top-right) */
+.product-card .card-num {
+  position: absolute; top: 12px; right: 14px;
+  font-size: 13px; font-weight: 300;
+  color: rgba(255,255,255,0.45); letter-spacing: 1px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-grid { grid-template-columns: repeat(2, 1fr); }
+  span.luxury-label.aos-init.aos-animate,
+  .bl-label{
+        font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+  }
+}
+a.btn-luxury.aos-init.aos-animate span{
+    text-transform: capitalize;
+}
+@media (max-width: 420px) {
+  .product-grid { grid-template-columns: 1fr; }
+}
+    </style>
 </head>
 <body>
 
@@ -143,7 +300,7 @@
                 </div> -->
             </div>
             <div class="bl-content">
-                <span class="bl-label">BRAND LEGACY</span>
+                <span class="bl-label">Brand Legacy</span>
                 <h2 class="bl-heading font-heading">A Fashion Legacy Trusted Across Generations.</h2>
                 <div class="bl-divider"></div>
                 <p class="bl-desc">
@@ -164,8 +321,10 @@
                 </ul>
 
                 <button class="bl-btn">
+                    <a href="./about.html">
                     <span class="bl-btn-text">Discover Our Journey</span>
                     <span class="bl-btn-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
                 </button>
             </div>
         </div>
@@ -197,79 +356,94 @@
     </section>
 
     <!-- Featured Products Section -->
+
+
+
+
+
     <section class="products">
-        <h2 class="section-title font-heading" data-aos="fade-up">Featured Editorials</h2>
+          <div style="text-align:center; margin-bottom: 13px;     margin-top: 1rem;">
+    <div class="ed-eyebrow">Editorials</div>
+    <h2 class="section-title font-heading" data-aos="fade-up">Women's <em>Collections</em></h2>
+  </div>
         <div class="product-grid">
             <div class="product-card" data-aos="fade-up" data-aos-delay="0">
                 <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Common.jpg?v=1778480138" alt="Dress" class="product-img">
-                <h4>Midnight Velvet Dress</h4>
+                
               
             </div>
             <div class="product-card" data-aos="fade-up" data-aos-delay="100">
                 <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/KANCHEPURAM.jpg?v=1778480138" alt="Suit" class="product-img">
-                <h4>Classic Italian Suit</h4>
+             
            
             </div>
             <div class="product-card" data-aos="fade-up" data-aos-delay="200">
                 <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/BANARASI.jpg?v=1778481536" alt="Coat" class="product-img">
-                <h4>Autumn Trench Coat</h4>
+              
                
             </div>
             <div class="product-card" data-aos="fade-up" data-aos-delay="300">
                 <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/georgette_1.jpg?v=1778481535" alt="Bag" class="product-img">
-                <h4>Leather Tote Bag</h4>
+              
                
             </div>
         </div>
     </section>
 
       <section class="products">
-        <h2 class="section-title font-heading" data-aos="fade-up">Mens Editorials</h2>
+  <div style="text-align:center; margin-bottom: 13px;     margin-top: 1rem;">
+    <div class="ed-eyebrow">Editorials</div>
+    <h2 class="section-title font-heading" data-aos="fade-up">Men's <em>Collections</em></h2>
+  </div>
         <div class="product-grid">
             <div class="product-card" data-aos="fade-up" data-aos-delay="0">
                 <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/1_fbddb731-832b-4745-8aa9-995933704811.webp?v=1778523744" alt="Dress" class="product-img">
-                <h4>Midnight Velvet Dress</h4>
+                
               
             </div>
             <div class="product-card" data-aos="fade-up" data-aos-delay="100">
                 <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/241019_Ramraj_e-com11408.webp?v=1778523745" alt="Suit" class="product-img">
-                <h4>Classic Italian Suit</h4>
+             
            
             </div>
             <div class="product-card" data-aos="fade-up" data-aos-delay="200">
                 <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/2_853dcf53-fe3e-48f3-b00c-f470acc01960.webp?v=1778523745" alt="Coat" class="product-img">
-                <h4>Autumn Trench Coat</h4>
+               
                
             </div>
             <div class="product-card" data-aos="fade-up" data-aos-delay="300">
                 <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/3_8a49cb02-9f77-4d38-b461-3966ad732d7d.webp?v=1778523745" alt="Bag" class="product-img">
-                <h4>Leather Tote Bag</h4>
+          
                
             </div>
         </div>
     </section>
 
       <section class="products">
-        <h2 class="section-title font-heading" data-aos="fade-up">Kids Editorials</h2>
+
+  <div style="text-align:center; margin-bottom: 13px;  margin-top: 1rem;">
+    <div class="ed-eyebrow">Editorials</div>
+    <h2 class="section-title font-heading" data-aos="fade-up">Kid's <em>Collections</em></h2>
+  </div>
         <div class="product-grid">
             <div class="product-card" data-aos="fade-up" data-aos-delay="0">
                 <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/187_944cd090-2f7a-42a2-85eb-a27bea58bcbc.webp?v=1778523967" alt="Dress" class="product-img">
-                <h4>Midnight Velvet Dress</h4>
+                
               
             </div>
             <div class="product-card" data-aos="fade-up" data-aos-delay="100">
                 <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/183_25820f9e-67c7-4102-a257-bac5641b109b.webp?v=1778523967" alt="Suit" class="product-img">
-                <h4>Classic Italian Suit</h4>
+             
            
             </div>
             <div class="product-card" data-aos="fade-up" data-aos-delay="200">
                 <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Collections_photo_eb7722b0-fcbd-4d9d-80a2-c8cad17f1f9e.webp?v=1778523960" alt="Coat" class="product-img">
-                <h4>Autumn Trench Coat</h4>
+          
                
             </div>
             <div class="product-card" data-aos="fade-up" data-aos-delay="300">
                 <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Party_Glam_396c9d8d-d7a8-4e7d-8dfb-735510f92a20.webp?v=1778523951" alt="Bag" class="product-img">
-                <h4>Leather Tote Bag</h4>
+           
                
             </div>
         </div>

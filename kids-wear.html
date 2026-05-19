@@ -8,6 +8,33 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <style>
+    h1, h2, h3, h4, h5, h6, .font-heading{
+        font-size: 34px;
+    }
+    @media (max-width: 768px) {
+            .banner-content.aos-init.aos-animate{
+        margin: 2rem;
+    }
+               h1, h2, h3, h4, h5, h6, .font-heading{
+        font-size: 34px;
+    }
+    .product-grid {
+        display: flex;
+        gap: 10px;
+        overflow-x: scroll;
+         scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+
+    }
+    .product-grid::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+}
+</style>
+
 </head>
 <body>
     <nav class="navbar">
@@ -59,23 +86,19 @@
         <div class="product-grid">
             <div class="product-card" data-aos="fade-up">
                 <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Collections_photo_eb7722b0-fcbd-4d9d-80a2-c8cad17f1f9e.webp?v=1778523960" alt="Kids" class="product-img">
-                <h4>Linen Summer Dress</h4>
-                <p>$65.00</p>
+               
             </div>
             <div class="product-card" data-aos="fade-up" data-aos-delay="100">
                 <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/187_944cd090-2f7a-42a2-85eb-a27bea58bcbc.webp?v=1778523967" alt="Kids" class="product-img">
-                <h4>Cozy Cotton Sweater</h4>
-                <p>$55.00</p>
+             
             </div>
             <div class="product-card" data-aos="fade-up" data-aos-delay="200">
                 <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/183_25820f9e-67c7-4102-a257-bac5641b109b.webp?v=1778523967" alt="Kids" class="product-img">
-                <h4>Denim Overalls</h4>
-                <p>$75.00</p>
+                
             </div>
             <div class="product-card" data-aos="fade-up" data-aos-delay="300">
                 <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Party_Glam_396c9d8d-d7a8-4e7d-8dfb-735510f92a20.webp?v=1778523951" alt="Kids" class="product-img">
-                <h4 >Organic Soft Tee</h4>
-                <p>$35.00</p>
+                
             </div>
         </div>
     </section>

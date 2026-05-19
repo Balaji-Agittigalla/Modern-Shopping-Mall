@@ -22,15 +22,17 @@ html {
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: sans-serif;
     color: var(--black);
     background-color: var(--white);
     overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6, .font-heading {
-    font-family: 'Playfair Display', serif;
-    font-weight: 600;
+     font-family: sans-serif;
+    font-weight: 300;
+    color: #1a1a1a;
+    font-size: 44px;
 }
 
 a {
@@ -42,7 +44,7 @@ a {
    TYPOGRAPHY & UTILITIES
 ========================================= */
 .section-title {
-    font-size: 2.5rem;
+    font-size: 36px;
     text-align: center;
     margin-bottom: 3rem;
     text-transform: capitalize;
@@ -81,7 +83,7 @@ a {
 
 
 .luxury-heading {
-    font-size: 3.5rem;
+    font-size: 36px;
     line-height: 1.15;
     margin-bottom: 25px;
     color: var(--black);
@@ -167,6 +169,9 @@ a {
     }
     .hamburger {
         display: block;
+    }
+    .banner-content.aos-init.aos-animate{
+        margin: 2rem;
     }
 }
 
@@ -715,7 +720,7 @@ a.logo.font-heading img{
 }
 
 .bl-heading {
-    font-size: 3.2rem;
+    font-size: 36px;
     line-height: 1.2;
     margin-bottom: 25px;
     color: var(--black);
@@ -921,7 +926,7 @@ a.logo.font-heading img{
 }
 
 .product-card h4 {
-    font-family: 'Poppins', sans-serif;
+     font-family: sans-serif;
     font-size: 1.1rem;
     font-weight: 500;
     margin-bottom: 5px;
@@ -954,7 +959,7 @@ a.logo.font-heading img{
 }
 
 .about-text {
-    padding: 80px 10%;
+    padding: 20px 10%;
 }
 
 .about-text h2 {
@@ -985,7 +990,7 @@ a.logo.font-heading img{
     width: 100%;
     padding: 15px;
     border: 1px solid #ddd;
-    font-family: 'Poppins', sans-serif;
+     font-family: sans-serif;
     outline: none;
     transition: var(--transition);
 }
@@ -1064,6 +1069,108 @@ a.logo.font-heading img{
     color: #777;
     font-size: 0.9rem;
 }
+h1,h2,h3,h4,h5,h6{
+        font-family: sans-serif;
+
+}
+
+/* ── Featured Editorials – Section ── */
+.featured-editorials-section {
+  padding: 60px 24px 70px;
+  background: #faf9f7;
+  text-align: center;
+}
+
+/* ── Title upgrade ── */
+.featured-editorials-section .section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+/* Add this line under the title via ::after */
+.featured-editorials-section .section-title::after {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 1px;
+  background: #1a1a1a;
+  margin: 14px auto 0;
+}
+
+/* ── Cards ── */
+.featured-editorials-section .editorial-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  aspect-ratio: 3 / 4;
+  cursor: pointer;
+}
+.featured-editorials-section .editorial-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  filter: brightness(0.88);
+}
+.featured-editorials-section .editorial-card:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.72);
+}
+
+/* ── Gradient overlay ── */
+.featured-editorials-section .card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.72) 0%,
+    rgba(0,0,0,0.18) 45%,
+    transparent 70%
+  );
+}
+
+/* ── Category label with dashes ── */
+.featured-editorials-section .card-category {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.featured-editorials-section .card-category::before,
+.featured-editorials-section .card-category::after {
+  content: '';
+  display: block;
+  width: 18px;
+  height: 0.5px;
+  background: rgba(255,255,255,0.7);
+}
+
+/* ── Shop Now button ── */
+.featured-editorials-section .card-btn {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #fff;
+  border: 0.5px solid rgba(255,255,255,0.6);
+  padding: 9px 22px;
+  background: transparent;
+  transition: background 0.3s, border-color 0.3s;
+}
+.featured-editorials-section .editorial-card:hover .card-btn {
+  background: rgba(255,255,255,0.15);
+  border-color: #fff;
+}
+
 
 /* =========================================
    WHATSAPP FLOATING BUTTON
@@ -1133,9 +1240,20 @@ a.logo.font-heading img{
     .bl-highlights {
         grid-template-columns: 1fr;
     }
-    .bl-heading {
-        font-size: 2.5rem;
+    .bl-heading,
+    h2.section-title.font-heading.aos-init.aos-animate {
+        font-size: 24px;
     }
+    
+.product-grid{
+        display: flex;
+    gap: 10px;
+}
+
+
+.product-card.aos-init.aos-animate{
+    flex: 0 0 80%;
+}
     .bl-glass-card {
         font-size: 8px;
         padding: 0;

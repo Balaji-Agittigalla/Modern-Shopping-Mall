@@ -9,6 +9,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+    h1, h2, h3, h4, h5, h6, .font-heading{
+        font-size: 34px;
+    }
+    @media (max-width: 768px) {
+            .banner-content.aos-init.aos-animate{
+        margin: 2rem;
+    }
+               h1, h2, h3, h4, h5, h6, .font-heading{
+        font-size: 34px;
+    }
+    .product-grid {
+        display: flex;
+        gap: 10px;
+        overflow-x: scroll;
+         scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+
+    }
+    .product-grid::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+}
+</style>
+
 </head>
 <body>
     <nav class="navbar">
@@ -60,33 +86,27 @@
         <div class="product-grid">
             <div class="product-card" data-aos="fade-up">
                 <img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?q=80&w=1887&auto=format&fit=crop" alt="Women" class="product-img">
-                <h4>Midnight Velvet Dress</h4>
-                <p>$290.00</p>
+         
             </div>
             <div class="product-card" data-aos="fade-up" data-aos-delay="100">
                 <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1920&auto=format&fit=crop" alt="Women" class="product-img">
-                <h4>Cashmere Long Coat</h4>
-                <p>$650.00</p>
+          
             </div>
             <div class="product-card" data-aos="fade-up" data-aos-delay="200">
                 <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Common.jpg?v=1778480138" alt="Women" class="product-img">
-                <h4>Leather Tote Bag</h4>
-                <p>$350.00</p>
+          
             </div>
             <div class="product-card" data-aos="fade-up" data-aos-delay="300">
                 <img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?q=80&w=1946&auto=format&fit=crop" alt="Women" class="product-img">
-                <h4 >Silk Evening Gown</h4>
-                <p>$890.00</p>
+          
             </div>
             <div class="product-card" data-aos="fade-up" data-aos-delay="400">
                 <img src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/KANCHEPURAM.jpg?v=1778480138" alt="Women" class="product-img">
-                <h4>Chic Fedora Hat</h4>
-                <p>$85.00</p>
+         
             </div>
             <div class="product-card" data-aos="fade-up" data-aos-delay="500">
                 <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=1983&auto=format&fit=crop" alt="Women" class="product-img">
-                <h4>Pleated Midi Skirt</h4>
-                <p>$130.00</p>
+          
             </div>
         </div>
     </section>
