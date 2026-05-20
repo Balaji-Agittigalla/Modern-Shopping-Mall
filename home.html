@@ -163,6 +163,9 @@
     letter-spacing: 1px;
     text-transform: capitalize;
   }
+  a.logo.font-heading{
+       margin-left: 8rem;
+  }
 }
 a.btn-luxury.aos-init.aos-animate span{
     text-transform: capitalize;
@@ -220,27 +223,179 @@ a.btn-luxury.aos-init.aos-animate span{
     <!-- Hero Section -->
 <!-- HERO SECTION START -->
 <header class="hero-section">
-  <div class="hero-image-wrapper">
-    <picture>
+  <div class="hero-slider">
 
-      <!-- Mobile Image -->
-      <source 
-        media="(max-width: 600px)"
-        srcset="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/WhatsApp_Image_2026-05-19_at_10.40.44_PM_1.jpg?v=1779210792"
-      >
+    <!-- Slide 1 -->
+    <div class="hero-slide active">
+      <picture>
+        <source 
+          media="(max-width: 600px)"
+          srcset="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/WhatsApp_Image_2026-05-19_at_10.40.44_PM_1.jpg?v=1779210792"
+        >
 
-      <!-- Desktop Image -->
-      <img
-        src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/WhatsApp_Image_2026-05-19_at_10.40.44_PM.jpg?v=1779210793"
-        alt="Elegant fashion models in premium attire"
-        class="hero-image"
-        loading="lazy"
-        decoding="async"
-      />
+        <img
+          src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/WhatsApp_Image_2026-05-19_at_10.40.44_PM.jpg?v=1779210793"
+          alt="Premium fashion banner"
+          class="hero-image"
+          loading="eager"
+        />
+      </picture>
+    </div>
 
-    </picture>
+    <!-- Slide 2 -->
+    <div class="hero-slide">
+      <picture>
+
+        <!-- Mobile -->
+        <source 
+          media="(max-width: 600px)"
+          srcset="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Gemini_Generated_Image_e0m0d7e0m0d7e0m0.png?v=1779298235"
+        >
+
+        <!-- Desktop -->
+        <img
+          src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Gemini_Generated_Image_c44gw5c44gw5c44g_1.png?v=1779298469"
+          alt="Premium fashion banner"
+          class="hero-image"
+          loading="lazy"
+        />
+      </picture>
+    </div>
+
+
+
+      <!-- Slide 3 -->
+        <div class="hero-slide">
+      <picture>
+
+        <!-- Mobile -->
+        <source 
+          media="(max-width: 600px)"
+          srcset="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Gemini_Generated_Image_pf8sjspf8sjspf8s_1.png?v=1779299035"
+        >
+
+        <!-- Desktop -->
+        <img
+          src="https://cdn.shopify.com/s/files/1/0639/3515/2267/files/Gemini_Generated_Image_pf8sjspf8sjspf8s_1.png?v=1779299035"
+          alt="Premium fashion banner"
+          class="hero-image"
+          loading="lazy"
+        />
+      </picture>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="hero-progress">
+      <span class="hero-progress-bar"></span>
+    </div>
+
   </div>
 </header>
+
+<style>
+  .hero-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .hero-slider {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .hero-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.7s ease;
+  }
+
+  .hero-slide.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Timeline Progress */
+  .hero-progress {
+    position: absolute;
+    left: 50%;
+    bottom: 25px;
+    transform: translateX(-50%);
+    width: 180px;
+    height: 4px;
+    background: rgba(255,255,255,0.35);
+    border-radius: 30px;
+    overflow: hidden;
+    z-index: 5;
+    backdrop-filter: blur(4px);
+  }
+
+  .hero-progress-bar {
+    display: block;
+    width: 0%;
+    height: 100%;
+    background: #fff;
+    border-radius: 30px;
+    animation: progressBar 2s linear infinite;
+  }
+
+  @keyframes progressBar {
+    from {
+      width: 0%;
+    }
+
+    to {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .hero-slider {
+      height: 100vh;
+    }
+
+    .hero-progress {
+      width: 120px;
+      bottom: 18px;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+
+    const slides = document.querySelectorAll(".hero-slide");
+    let currentSlide = 0;
+
+    function changeSlide() {
+
+      slides[currentSlide].classList.remove("active");
+
+      currentSlide++;
+
+      if (currentSlide >= slides.length) {
+        currentSlide = 0;
+      }
+
+      slides[currentSlide].classList.add("active");
+    }
+
+    // Change every 2 seconds
+    setInterval(changeSlide, 2000);
+
+  });
+</script>
 
 <style>
 .hero-section,
