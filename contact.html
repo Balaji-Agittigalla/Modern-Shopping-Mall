@@ -98,21 +98,63 @@
             </div>
 
             <div class="contact-form-container" data-aos="fade-left" style="background: var(--white); padding: 40px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
-                <form class="contact-form" style="max-width: 100%; margin: 0;">
-                    <div style="margin-bottom: 20px;">
-                        <input type="text" placeholder="Your Name" required style="width: 100%; padding: 15px; border: 1px solid #ddd; font-family: 'Poppins', sans-serif; outline: none; border-radius: 5px;">
-                    </div>
-                    <div style="margin-bottom: 20px;">
-                        <input type="email" placeholder="Your Email" required style="width: 100%; padding: 15px; border: 1px solid #ddd; font-family: 'Poppins', sans-serif; outline: none; border-radius: 5px;">
-                    </div>
-                    <div style="margin-bottom: 20px;">
-                        <input type="tel" placeholder="Your Phone Number" required style="width: 100%; padding: 15px; border: 1px solid #ddd; font-family: 'Poppins', sans-serif; outline: none; border-radius: 5px;">
-                    </div>
-                    <div style="margin-bottom: 20px;">
-                        <textarea rows="5" placeholder="Your Message" required style="width: 100%; padding: 15px; border: 1px solid #ddd; font-family: 'Poppins', sans-serif; outline: none; border-radius: 5px; resize: vertical;"></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary btn-dark" style="width: 100%; border-radius: 5px;">Send Message</button>
-                </form>
+               <form class="contact-form" id="contactForm" style="max-width: 100%; margin: 0;">
+
+
+<div style="margin-bottom: 20px;">
+    <input type="text" id="name" placeholder="Your Name" required
+        style="width: 100%; padding: 15px; border: 1px solid #ddd; font-family: 'Poppins', sans-serif; outline: none; border-radius: 5px;">
+</div>
+
+<div style="margin-bottom: 20px;">
+    <input type="email" id="email" placeholder="Your Email" required
+        style="width: 100%; padding: 15px; border: 1px solid #ddd; font-family: 'Poppins', sans-serif; outline: none; border-radius: 5px;">
+</div>
+
+<div style="margin-bottom: 20px;">
+    <input type="tel" id="phone" placeholder="Your Phone Number" required
+        style="width: 100%; padding: 15px; border: 1px solid #ddd; font-family: 'Poppins', sans-serif; outline: none; border-radius: 5px;">
+</div>
+
+<div style="margin-bottom: 20px;">
+    <textarea id="message" rows="5" placeholder="Your Message" required
+        style="width: 100%; padding: 15px; border: 1px solid #ddd; font-family: 'Poppins', sans-serif; outline: none; border-radius: 5px; resize: vertical;"></textarea>
+</div>
+
+<button type="submit" class="btn-primary btn-dark" style="width: 100%; border-radius: 5px;">
+    Send Message
+</button>
+
+</form>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const message = document.getElementById('message').value;
+
+    const whatsappMessage =
+`*New Contact Form Submission*
+
+👤 Name: ${name}
+
+📧 Email: ${email}
+
+📱 Phone: ${phone}
+
+📝 Message:
+${message}`;
+
+    const whatsappURL =
+`https://wa.me/918147484001?text=${encodeURIComponent(whatsappMessage)}`;
+
+    window.open(whatsappURL, '_blank');
+});
+</script>
+
             </div>
         </div>
     </section>
