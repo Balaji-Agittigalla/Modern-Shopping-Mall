@@ -615,15 +615,72 @@ a.btn-luxury.aos-init.aos-animate span{
     </section>
 
     <!-- Contact Form Section -->
-    <section id="contact" class="contact">
-        <h2 class="section-title font-heading" data-aos="fade-up">Get in Touch</h2>
-        <form class="contact-form" data-aos="fade-up" data-aos-delay="100">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea rows="5" placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn-primary btn-dark">Send Message</button>
-        </form>
-    </section>
+<section id="contact" class="contact">
+    <h2 class="section-title font-heading" data-aos="fade-up">
+        Get in Touch
+    </h2>
+
+<form id="contactForm" class="contact-form" data-aos="fade-up" data-aos-delay="100">
+
+    <input
+        type="text"
+        id="name"
+        placeholder="Your Name"
+        required
+    >
+
+    <input
+        type="email"
+        id="email"
+        placeholder="Your Email"
+        required
+    >
+
+    <textarea
+        id="message"
+        rows="5"
+        placeholder="Your Message"
+        required
+    ></textarea>
+
+    <button
+        type="submit"
+        class="btn-primary btn-dark">
+        Send Message
+    </button>
+
+</form>
+
+</section>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    const whatsappMessage =
+`🔔 New Contact Form Enquiry
+
+👤 Name: ${name}
+
+📧 Email: ${email}
+
+📝 Message:
+${message}`;
+
+    const whatsappUrl =
+`https://wa.me/918147484001?text=${encodeURIComponent(whatsappMessage)}`;
+
+    window.open(whatsappUrl, "_blank");
+
+    this.reset();
+});
+</script>
+
 
     <!-- Footer -->
     <footer class="footer">
